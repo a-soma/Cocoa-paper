@@ -1,4 +1,4 @@
-# Replication code: Cocoa Price Shocks and Macroeconomic Adjustment in Cocoa Dependent Economies
+# Cocoa Price Shocks and Macroeconomic Adjustment in Cocoa Dependent Economies
 
 This folder contains the data processing and analysis code for the paper
 "Cocoa Price Shocks and Macroeconomic Adjustment in Cocoa Dependent
@@ -10,26 +10,26 @@ Economies: Evidence from Inflation and Real Exchange Rate Dynamics"
 - `data/cacao_panel_master.csv`: the analysis ready panel (8 countries, 1991
   to 2024, 272 country year observations, 77 variables). This is the exact
   file used to produce every table and figure in the paper.
-- `01_data_processing.py`: documents and re implements the construction of
+- `code/01_data_processing.py`: documents and re implements the construction of
   the panel from the public sources cited in Section 3 of the paper (IMF
   World Economic Outlook and International Financial Statistics, World Bank
   World Development Indicators, IMF real effective exchange rate database,
   United Nations Comtrade, and the FAO cocoa production series via Our World
   in Data). See the note below on reproduction fidelity.
-- `02_table1_descriptive_stats.py`: Table 1.
-- `03_table2_baseline_regressions.py`: Table 2 (H1, H2a, H2b baseline).
-- `04_table3_asymmetry_h3.py`: Table 3 (H3, positive versus negative shock).
-- `05_table4_iv_leaveout.py`: Table 4 (leave out instrument, Section 6).
-- `06_table5_dml_control_selection.py`: Table 5 (double machine learning).
-- `07_causal_forest.py`: causal forest estimates cited in Section 7.3.
-- `08_local_projections.py`: Figure 4, local projections at horizons 0 to 6.
-- `09_table6_institutional_heterogeneity.py`: Table 6 and the Ivorian
+- `code/02_table1_descriptive_stats.py`: Table 1.
+- `code/03_table2_baseline_regressions.py`: Table 2 (H1, H2a, H2b baseline).
+- `code/04_table3_asymmetry_h3.py`: Table 3 (H3, positive versus negative shock).
+- `code/05_table4_iv_leaveout.py`: Table 4 (leave out instrument, Section 6).
+- `code/06_table5_dml_control_selection.py`: Table 5 (double machine learning).
+- `code/07_causal_forest.py`: causal forest estimates cited in Section 7.3.
+- `code/08_local_projections.py`: Figure 4, local projections at horizons 0 to 6.
+- `code/09_table6_institutional_heterogeneity.py`: Table 6 and the Ivorian
   political crisis control (Section 7.5).
-- `10_synthetic_control_civ.py`: Figure 6, the Cote d'Ivoire 2023 to 2024
+- `code/10_synthetic_control_civ.py`: Figure 6, the Cote d'Ivoire 2023 to 2024
   case study (Section 7.6).
-- `run_all.py`: runs every script in sequence and prints a summary of the
+- `code/run_all.py`: runs every script in sequence and prints a summary of the
   key coefficients, for a quick end to end check.
-- `analysis_notebook.ipynb`: a single notebook that walks through the same
+- `code/analysis_notebook.ipynb`: a single notebook that walks through the same
   pipeline with narrative cells, organized to mirror the structure of the
   paper. Use this for interactive exploration; use the numbered scripts for
   a clean, scriptable run.
@@ -79,7 +79,7 @@ comment at the top of the relevant script:
   Ivorian political crisis years are controlled for) but not the exact
   point estimates.
 
-`01_data_processing.py` re implements, from source level columns already
+`code/01_data_processing.py` re implements, from source level columns already
 present in `cacao_panel_master.csv`, every derived variable used in the
 paper: the exposure weights, the shift share shock and its positive and
 negative components, the standardized shock, the crisis dummies, the
